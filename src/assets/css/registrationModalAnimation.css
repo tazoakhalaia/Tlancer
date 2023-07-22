@@ -1,0 +1,11 @@
+.registermodal-enter-from {
+    opacity: 0;
+}
+
+.registermodal-enter-to {
+    opacity: 1;
+}
+
+.registermodal-enter-active {
+    transition: all 1s ease-in-out;
+}
