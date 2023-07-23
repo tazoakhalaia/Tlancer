@@ -40,10 +40,12 @@ import { ref } from 'vue';
 import ButtonModal from '@/components/ui/ButtonModal.vue'
 import RegisterModal from '@/components/shared/RegisterModal.vue'
 import '@/assets/css/registrationModalAnimation.css'
+import { useRouter } from 'vue-router'
 import axios from 'axios';
 let openRegistrationModal = ref(false)
 let email = ref('')
 let password = ref('')
+let router = useRouter()
 
 function openRegistration(){
     openRegistrationModal.value = true
@@ -57,5 +59,8 @@ async function signIn(){
     })
     token = response.data.token
     localStorage.setItem('token', token)
+    if(token){
+        router.push({ path: '/profile' })
+    }
 }
 </script>
