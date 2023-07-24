@@ -19,7 +19,7 @@
                   </div>
                   <button @click.prevent="signIn" class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 bg-blue-500">Sign in</button>
                   <div class="text-sm font-light text-gray-500 dark:text-gray-400 flex">
-                      Don’t have an account yet?  <ButtonModal buttonName="Sign up" @click="openRegistration" />
+                      Don’t have an account yet?  <Button buttonName="Sign up" @click="openRegistration" />
                   </div>
               </form>
           </div>
@@ -37,7 +37,7 @@
 </template>
 <script setup> 
 import { ref } from 'vue';
-import ButtonModal from '@/components/ui/ButtonModal.vue'
+import Button from '@/components/ui/ButtonSubmit.vue'
 import RegisterModal from '@/components/shared/RegisterModal.vue'
 import '@/assets/css/registrationModalAnimation.css'
 import { useRouter } from 'vue-router'
