@@ -46,13 +46,14 @@ let openRegistrationModal = ref(false)
 let email = ref('')
 let password = ref('')
 let router = useRouter()
+let id = ref('')
 
 function openRegistration(){
     openRegistrationModal.value = true
 }
 
 async function signIn(){
-    let token;
+    let token
     let response = await axios.post('http://exam.tlancer.net/api/login', {
         "email": email.value,
         "password": password.value
@@ -62,5 +63,7 @@ async function signIn(){
     if(token){
         router.push({ path: '/profile' })
     }
+    console.log(response);
 }
+
 </script>
