@@ -9,3 +9,15 @@
 .registermodal-enter-active {
     transition: all 1s ease-in-out;
 }
+
+.registermodal-leave-from {
+    opacity: 1;
+}
+
+.registermodal-leave-to {
+    opacity: 0;
+}
+
+.registermodal-leave-active {
+    transition: all 1s ease-in-out;
+}
