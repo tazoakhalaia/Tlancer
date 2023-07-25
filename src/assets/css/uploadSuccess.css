@@ -1,0 +1,30 @@
+.message-enter-from {
+    opacity: 0;
+    position: absolute;
+}
+
+.message-enter-to {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+}
+
+.message-enter-active {
+    transition: all 1s ease-in-out;
+}
+
+.message-leave-from {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+}
+
+.message-leave-to {
+    opacity: 0;
+    position: absolute;
+    top: 10px;
+}
+
+.message-leave-active {
+    transition: all 0.5s ease-in-out;
+}
